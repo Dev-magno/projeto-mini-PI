@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteRule ^test$ test.php [L]
+
+# Habilitar o módulo de reescrita
+RewriteEngine On
+
+# Reescrever URLs amigáveis
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L]
+
